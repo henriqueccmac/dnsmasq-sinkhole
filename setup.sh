@@ -8,7 +8,7 @@ SCRIPT_PATH="/usr/local/bin/update_blocklists.sh"
 PLIST_PATH="/Library/LaunchDaemons/net.dnsmasq.plist"
 PLIST_LABEL="net.dnsmasq"
 
-echo "--- BlackHole Setup Script ---"
+echo "--- blackholedns Setup Script ---"
 
 if [ ! -f "$DNSMASQ_BIN" ]; then
     echo "ERROR: dnsmasq binary not found at $DNSMASQ_BIN."
@@ -67,7 +67,7 @@ sudo chmod 644 "$PLIST_PATH"
 echo "Running initial blocklist download (this may take a minute)..."
 sudo "$SCRIPT_PATH"
 
-echo "Starting BlackHole DNS service..."
+echo "Starting dnsmasq..."
 sudo launchctl load "$PLIST_PATH"
 
 echo ""
