@@ -18,7 +18,7 @@ To install, download the latest dnmasq [version](https://thekelleys.org.uk/dnsma
 
 ### Installation
 
-Run the setup script:
+Run the [setup](setup.sh) script:
 
 ```bash
 sudo ./setup.sh
@@ -31,9 +31,11 @@ After installation, you must manually change your network settings to use the lo
 sudo networksetup -setdnsservers Wi-Fi 127.0.0.1
 ```
 
+For more extensive coverage, add more blocklists to [blocklist_sources.txt](blocklist_sources.txt).
+
 ### Maintenance and Automation
 
-To fetch the latest blocklists, run the update script:
+To fetch the latest blocklists, run the [update](update_blocklists.sh) script:
 
 ```bash
 sudo /usr/local/bin/update_blocklists.sh
@@ -47,7 +49,7 @@ Use crontab to automate the update. Open the editor with `sudo crontab -e` and a
 
 ### Uninstall
 
-To remove all configuration files, run the cleanup script:
+To remove all configuration files, run the [cleanup](cleanup.sh) script:
 
 ```Bash
 sudo ./cleanup.sh
