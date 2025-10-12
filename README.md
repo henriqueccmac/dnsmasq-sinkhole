@@ -14,7 +14,7 @@ System-wide ad and tracker blocking on macOS using **dnsmasq** to filter DNS req
 This guide assumes you have **dnsmasq** at **`/usr/local/sbin/dnsmasq`**.
 It is recommended to do a manual install. Installing via homebrew can lead to permission hell when starting with `brew services`.
 
-To install, download the latest dnmasq [version](https://thekelleys.org.uk/dnsmasq/), unzip it and run `make install`.
+To install download the latest dnmasq [version](https://thekelleys.org.uk/dnsmasq/), unzip it and run `make install`.
 
 ### Installation
 
@@ -24,18 +24,18 @@ Run the [setup](setup.sh) script:
 sudo ./setup.sh
 ```
 
-After installation, you must manually change your network settings to use the local DNS filter.
+After installation you must manually change your network settings to use the local DNS filter.
 
 ```bash
 # WARNING: this will overwrite your DNS configurations
 sudo networksetup -setdnsservers Wi-Fi 127.0.0.1
 ```
 
-For more extensive coverage, add more blocklists to [blocklist_sources.txt](blocklist_sources.txt).
+For more extensive coverage add more blocklists to [blocklist_sources.txt](blocklist_sources.txt).
 
 ### Maintenance and Automation
 
-To fetch the latest blocklists, run the [update](update_blocklists.sh) script:
+To fetch the latest blocklists run the [update](update_blocklists.sh) script:
 
 ```bash
 sudo /usr/local/bin/update_blocklists.sh
@@ -49,7 +49,7 @@ Use crontab to automate the update. Open the editor with `sudo crontab -e` and a
 
 ### Uninstall
 
-To remove all configuration files, run the [cleanup](cleanup.sh) script:
+To remove all configuration files run the [cleanup](cleanup.sh) script:
 
 ```Bash
 sudo ./cleanup.sh
