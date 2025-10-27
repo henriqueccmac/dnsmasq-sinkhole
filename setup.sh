@@ -8,7 +8,7 @@ SCRIPT_PATH="/usr/local/bin/update_blocklists.sh"
 PLIST_PATH="/Library/LaunchDaemons/net.dnsmasq.plist"
 PLIST_LABEL="net.dnsmasq"
 
-echo "--- blackholedns Setup Script ---"
+echo "--- Setup Script ---"
 
 if [ ! -f "$DNSMASQ_BIN" ]; then
     echo "ERROR: dnsmasq binary not found at $DNSMASQ_BIN."
