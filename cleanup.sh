@@ -8,7 +8,7 @@ PLIST_PATH="/Library/LaunchDaemons/net.dnsmasq.plist"
 PLIST_LABEL="net.dnsmasq"
 CRON_JOB="/usr/local/bin/update_blocklists.sh"
 
-echo "--- blackholedns Cleanup Script ---"
+echo "--- Cleanup Script ---"
 
 echo "1. Stopping and unloading the net.dnsmasq service..."
 sudo launchctl unload "$PLIST_PATH" 2>/dev/null || true
