@@ -1,4 +1,4 @@
-## blackholedns
+## dnsmasq-sinkhole
 A [dnsmasq](https://thekelleys.org.uk/dnsmasq/doc.html) based DNS Filter config.
 
 ### Features
